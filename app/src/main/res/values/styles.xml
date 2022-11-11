@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="tituloSite">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">#0047B6</item>
+    </style>
+</resources>
