@@ -10,12 +10,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.aula11_11.Entities.Livro;
 import com.example.aula11_11.R;
+import com.example.aula11_11.utils.ItemClick;
 
 import java.util.ArrayList;
 
 public class LivroAdapter extends RecyclerView.Adapter<LivroAdapter.ViewHolder> {
 
     private ArrayList<Livro> listaLivros;
+    private RecyclerView recyclerView;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private final TextView nomeLivro;
@@ -40,8 +42,8 @@ public class LivroAdapter extends RecyclerView.Adapter<LivroAdapter.ViewHolder> 
         }
     }
 
-    public LivroAdapter(ArrayList<Livro> dataSet) {
-        listaLivros = dataSet;
+    public LivroAdapter(ArrayList<Livro> dataSet, RecyclerView recyclerView) {
+        listaLivros = dataSet; this.recyclerView = recyclerView;
     }
     public LivroAdapter() {
         listaLivros = new ArrayList<>();
@@ -52,6 +54,7 @@ public class LivroAdapter extends RecyclerView.Adapter<LivroAdapter.ViewHolder> 
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
         View view = LayoutInflater.from(viewGroup.getContext())
                 .inflate(R.layout.livro_lista, viewGroup, false);
+        view.setOnClickListener(new ItemClick());
         return new ViewHolder(view);
     }
 
@@ -59,7 +62,7 @@ public class LivroAdapter extends RecyclerView.Adapter<LivroAdapter.ViewHolder> 
     public void onBindViewHolder(ViewHolder viewHolder, int position) {
         viewHolder.getNomeLivro().setText(listaLivros.get(position).getNome());
         viewHolder.getEditoraLivro().setText(listaLivros.get(position).getEditora());
-        viewHolder.getAnoLivro().setText(listaLivros.get(position).getAno().toString());
+        viewHolder.getAnoLivro().setText(listaLivros.get(position).getAno());
     }
 
     @Override

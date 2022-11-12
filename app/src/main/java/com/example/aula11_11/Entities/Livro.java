@@ -6,9 +6,9 @@ public class Livro {
     private String nome;
     private String sinopse;
     private String editora;
-    private Integer ano;
+    private String ano;
 
-    public Livro(Integer id, String nome, String sinopse, String editora, Integer ano) {
+    public Livro(Integer id, String nome, String sinopse, String editora, String ano) {
         this.id = id;
         this.nome = nome;
         this.sinopse = sinopse;
@@ -48,11 +48,11 @@ public class Livro {
         this.editora = editora;
     }
 
-    public Integer getAno() {
+    public String getAno() {
         return ano;
     }
 
-    public void setAno(Integer ano) {
+    public void setAno(String ano) {
         this.ano = ano;
     }
 }
