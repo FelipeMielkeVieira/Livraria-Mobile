@@ -54,7 +54,7 @@ public class LivroAdapter extends RecyclerView.Adapter<LivroAdapter.ViewHolder> 
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
         View view = LayoutInflater.from(viewGroup.getContext())
                 .inflate(R.layout.livro_lista, viewGroup, false);
-        view.setOnClickListener(new ItemClick());
+        view.setOnClickListener(new ItemClick(recyclerView, listaLivros));
         return new ViewHolder(view);
     }
 

@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        adapter = new LivroAdapter(listaLivros);
+        adapter = new LivroAdapter(listaLivros, recyclerView);
         recyclerView.setAdapter(adapter);
     }
 
