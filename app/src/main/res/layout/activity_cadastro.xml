@@ -28,6 +28,7 @@
 
     <EditText
         android:id="@+id/nomeLivroInput"
+        style="@style/inputLivro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -49,6 +50,7 @@
 
     <EditText
         android:id="@+id/sinopseLivroInput"
+        style="@style/inputLivro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -70,6 +72,7 @@
 
     <EditText
         android:id="@+id/editoraLivroInput"
+        style="@style/inputLivro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -89,25 +92,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editoraLivroInput" />
 
-    <EditText
-        android:id="@+id/anoLivroInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/livroText" />
-
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="30dp"
-        android:text="Selecionar Foto"
         android:onClick="cadastrarImagem"
+        android:text="Selecionar Foto"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/anoLivroInput" />
 
@@ -123,4 +115,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button2" />
+
+    <EditText
+        android:id="@+id/anoLivroInput"
+        style="@style/inputLivro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/livroText" />
 </androidx.constraintlayout.widget.ConstraintLayout>

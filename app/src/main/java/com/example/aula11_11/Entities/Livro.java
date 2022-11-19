@@ -1,12 +1,26 @@
 package com.example.aula11_11.Entities;
 
-public class Livro {
+import android.graphics.drawable.Drawable;
+
+import java.io.Serializable;
+
+public class Livro implements Serializable {
 
     private Integer id;
-    private String nome;
-    private String sinopse;
-    private String editora;
-    private String ano;
+    private final String nome;
+    private final String sinopse;
+    private final String editora;
+    private final String ano;
+    private Drawable imagem;
+
+    public Livro(Integer id, String nome, String sinopse, String editora, String ano, Drawable imagem) {
+        this.id = id;
+        this.nome = nome;
+        this.sinopse = sinopse;
+        this.editora = editora;
+        this.ano = ano;
+        this.imagem = imagem;
+    }
 
     public Livro(Integer id, String nome, String sinopse, String editora, String ano) {
         this.id = id;
@@ -28,31 +42,19 @@ public class Livro {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
     public String getSinopse() {
         return sinopse;
-    }
-
-    public void setSinopse(String sinopse) {
-        this.sinopse = sinopse;
     }
 
     public String getEditora() {
         return editora;
     }
 
-    public void setEditora(String editora) {
-        this.editora = editora;
-    }
-
     public String getAno() {
         return ano;
     }
 
-    public void setAno(String ano) {
-        this.ano = ano;
+    public Drawable getImagem() {
+        return imagem;
     }
 }
